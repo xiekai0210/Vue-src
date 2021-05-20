@@ -72,14 +72,11 @@ function observe(data) {
 }
 
 // 观察者： 保存更新函数，值发生变化调用更新函数
-const watchers = []
 class Watcher {
   constructor(vm, key, updateFn) {
     this.vm = vm
     this.key = key
     this.updateFn = updateFn
-
-    watchers.push(this)
 
     // Dep.target静态属性上设置当前watcher实例
     Dep.target = this

@@ -62,6 +62,7 @@ class Compile {
     return attrName.indexOf('k-') === 0
   }
 
+  // 1、初始化 2、创建watcher实例
   update(node, exp, dir) {
     // 指令对应的更新函数xxUpdater
     const fn = this[dir + 'Updater']
